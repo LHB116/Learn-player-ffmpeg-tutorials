@@ -38,12 +38,12 @@ Tutorial07:
 基于Tutorial05添加了  seeking
 
 <br /> FFplay源码分析
-https://mp.weixin.qq.com/s/MYecqlqJdmesWZD42kjBcA
-https://blog.csdn.net/m0_60565784/article/details/131740449
-https://blog.csdn.net/m0_60565784?type=blog
+<br />https://mp.weixin.qq.com/s/MYecqlqJdmesWZD42kjBcA
+<br />https://blog.csdn.net/m0_60565784/article/details/131740449
+<br />https://blog.csdn.net/m0_60565784?type=blog
 
 <br /> ffmpeg实现单线程异步的视频播放器
-https://blog.csdn.net/u013113678/article/details/128293698
+<br />https://blog.csdn.net/u013113678/article/details/128293698
 
 
 <br /> 5、 SDL_CondSignal的作用是什么，如何发挥作用？  
@@ -64,30 +64,22 @@ SDL_CondWaitTimeout(is->continue_read_thread, wait_mutex, 10);
 av_rescale_q用于计算Packet的PTS
 https://blog.csdn.net/Dontla/article/details/134901321
 
-<br />8、 
-计算时间戳:  timestame(秒)=pts*av_qtd(st->time_base)
-计算帧时长:  time(秒)=duration*av_qtd(st->time_base)
-#define AV_TIME_BASE 1000000
-#define AV_TIME_BASE_Q (AVRational){1, AV_TIME_BASE}
-av_gettime_relative()是ffmpeg中获取当前时间的函数，返回值是微妙
-
-
-<br />9、 生产者消费者
+<br />8、 生产者消费者
 https://blog.csdn.net/GG_Bruse/article/details/129035055
 
 
-<br />10、 ffmpeg中av_seek_frame只能跳转到关键帧位置，这种seek就会出现不跟手的问题
+<br />9、 ffmpeg中av_seek_frame只能跳转到关键帧位置，这种seek就会出现不跟手的问题
 seek到非关键帧的思路：
 https://blog.csdn.net/ice_ly000/article/details/84977374
 http://blog.yundiantech.com/?log=blog&id=13
 SDLPlayer-ffplystyle无法正常退出  seek到末尾也有问题
 
-<br />11、 暂停的时候是否要进行静音  http://blog.yundiantech.com/?log=blog&id=13
+<br />10、 暂停的时候是否要进行静音  http://blog.yundiantech.com/?log=blog&id=13
 
-<br />12、视频同步到音频的基本方法是：如果视频超前音频，则不进行播放，以等待音频；
+<br />11、视频同步到音频的基本方法是：如果视频超前音频，则不进行播放，以等待音频；
 如果视频落后音频，则丢弃当前帧直接播放下一帧，以追赶音频。
 
-<br />13、为什么FFplay要有两个数据队列 packet_queue 和 frame_queue
+<br />12、为什么FFplay要有两个数据队列 packet_queue 和 frame_queue
 其中packet_queue中存放的是解封装后的packet，
 frame_queue中存放的是解码后的数据，
 为了快速解码，如果是RA或LDB有包含B帧，那么pts与dts不同，

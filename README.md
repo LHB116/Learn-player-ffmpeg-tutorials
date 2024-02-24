@@ -82,8 +82,7 @@ https://blog.csdn.net/ice_ly000/article/details/84977374
 http://blog.yundiantech.com/?log=blog&id=13
 SDLPlayer-ffplystyle无法正常退出  seek到末尾也有问题
 
-<br />11、 
-<br />暂停的时候是否要进行静音  http://blog.yundiantech.com/?log=blog&id=13
+<br />11、 暂停的时候是否要进行静音  http://blog.yundiantech.com/?log=blog&id=13
 
 <br />12、视频同步到音频的基本方法是：如果视频超前音频，则不进行播放，以等待音频；
 如果视频落后音频，则丢弃当前帧直接播放下一帧，以追赶音频。
